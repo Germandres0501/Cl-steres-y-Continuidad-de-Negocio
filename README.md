@@ -13,4 +13,4 @@ Este proyecto tiene como objetivo **explicar y documentar** los conceptos relaci
 - **CSS3** → Estilos y diseño.
 - **Git/GitHub** → Control de versiones y repositorio.
 
-## 📂 Estructura del proyecto
+
