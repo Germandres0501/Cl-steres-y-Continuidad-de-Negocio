@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clústeres y Continuidad de Negocio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">🖥️ Clústeres</div>
+      <ul class="nav-menu">
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#tipos">Tipos</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#comparativa">Comparativa</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="introduccion" class="content-section">
+    <h2>📋 Introducción</h2>
+    <p>
+      Un <strong>clúster</strong> es un conjunto de servidores interconectados que trabajan
+      como si fueran una sola máquina, compartiendo recursos y distribuyendo tareas.
+      Su objetivo principal es garantizar <em>alta disponibilidad, tolerancia a fallos,
+      escalabilidad y mejor rendimiento</em>.
+    </p>
+    <p>
+      En el ámbito de la <strong>continuidad de negocio</strong>, los clústeres juegan un
+      papel crucial, ya que permiten que los sistemas críticos sigan funcionando incluso
+      en caso de fallos o desastres, minimizando el tiempo de inactividad.
+    </p>
+  </section>
+
+  
+  <section id="tipos" class="content-section">
+    <h2>🗂️ Tipos de Clústeres</h2>
+    <p>A continuación, se presentan los principales tipos de clústeres utilizados en la actualidad:</p>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Descripción</th>
+          <th>Ejemplo de Uso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alta Disponibilidad (HA)</td>
+          <td>Garantiza que si un nodo falla, otro lo sustituya inmediatamente.</td>
+          <td>Sistemas bancarios, hospitales.</td>
+        </tr>
+        <tr>
+          <td>Balanceo de Carga</td>
+          <td>Distribuye las peticiones entre varios servidores para optimizar el rendimiento.</td>
+          <td>Aplicaciones web con muchos usuarios.</td>
+        </tr>
+        <tr>
+          <td>HPC (High Performance Computing)</td>
+          <td>Conjunto de nodos que trabajan en paralelo para resolver cálculos complejos.</td>
+          <td>Simulaciones científicas, meteorología.</td>
+        </tr>
+        <tr>
+          <td>Almacenamiento</td>
+          <td>Ofrece grandes volúmenes de datos con redundancia y seguridad.</td>
+          <td>Big Data, backups empresariales.</td>
+        </tr>
+        <tr>
+          <td>Bases de Datos</td>
+          <td>Permite replicación y disponibilidad constante de la información.</td>
+          <td>Sistemas de gestión empresarial (ERP, CRM).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  
+  <section id="beneficios" class="content-section">
+    <h2>✅ Beneficios para la Continuidad de Negocio</h2>
+    <ul>
+      <li><strong>Alta disponibilidad:</strong> los servicios críticos permanecen activos.</li>
+      <li><strong>Escalabilidad:</strong> se pueden añadir nodos sin interrumpir operaciones.</li>
+      <li><strong>Tolerancia a fallos:</strong> el sistema sigue funcionando aunque un nodo falle.</li>
+      <li><strong>Mejor rendimiento:</strong> procesamiento paralelo y balanceo de carga.</li>
+      <li><strong>Respaldo de datos:</strong> seguridad ante pérdidas de información.</li>
+    </ul>
+  </section>
+
+  
+  <section id="comparativa" class="content-section">
+    <h2>📊 Comparativa de Disponibilidad</h2>
+    <p>En el gráfico se observa la disponibilidad típica de diferentes clústeres:</p>
+    <div class="chart-container">
+      <canvas id="performanceChart"></canvas>
+    </div>
+  </section>
+
+  
+  <section id="conclusion" class="content-section">
+    <h2>📌 Conclusión</h2>
+    <p>
+      Los clústeres son esenciales para las organizaciones modernas que dependen de
+      la tecnología. No solo mejoran el rendimiento y la seguridad, sino que también
+      aseguran que la empresa pueda mantener sus operaciones incluso en situaciones
+      críticas, garantizando así la <strong>continuidad del negocio</strong>.
+    </p>
+  </section>
+
+  
+  <footer class="footer">
+    <p>© 2025 Clústeres y Continuidad</p>
+  </footer>
+
+  
+  <script>
+    const ctx = document.getElementById('performanceChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Alta Disponibilidad', 'Balanceo de Carga', 'HPC', 'Almacenamiento', 'Bases de Datos'],
+        datasets: [{
+          label: 'Disponibilidad (%)',
+          data: [99.99, 99.9, 99.5, 99.95, 99.99],
+          backgroundColor: '#4a90e2',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { backgroundColor: '#2d3748', titleColor: '#fff', bodyColor: '#fff' }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { callback: v => v + "%" } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a202c;
+  background: #f8f9fa;
+  margin: 0;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #2d3748;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #fff;
+}
+
+
+.content-section {
+  max-width: 1000px;
+  margin: 6rem auto 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgb(179, 205, 220);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+p, li {
+  line-height: 1.6;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.styled-table th, .styled-table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.styled-table th {
+  background-color: #2d3748;
+  color: white;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+
+.chart-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+.footer {
+  background: #2d3748;
+  color: #e2e8f0;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+}
